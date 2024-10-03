@@ -1,5 +1,6 @@
 {
   "name": "contact-app",
+  "homepage": "https://madhavimanoj.github.io/my_contact_manager/"
   "version": "0.1.0",
   "private": true,
   "dependencies": {
