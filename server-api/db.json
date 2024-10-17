@@ -1,0 +1,39 @@
+{
+  "contacts": [
+    {
+      "id": "4b7ce5cb-e37c-4ccc-bf1b-caa4e0b83b10",
+      "name": "name",
+      "email": "email"
+    },
+    {
+      "id": "8e383ddc-d29d-4484-afbc-5f9db4e65506",
+      "name": "Madhavi Chute",
+      "email": "madhavi.chute.cse@ghrce.raisoni.net"
+    },
+    {
+      "id": "375e0e1d-c5c6-4bde-a420-718d39e30020",
+      "name": "hgb djhc",
+      "email": "madhavi.chute.cse@ghrce.raisoni.net"
+    },
+    {
+      "id": "5dc3aca6-9918-4370-b0ab-a04464d49286",
+      "name": "Madhavi Chute",
+      "email": "madhavi.chute.cse@ghrce.raisoni.net"
+    },
+    {
+      "id": "361664f7-6341-45fd-b4c5-3c67f4773367",
+      "name": "dfv",
+      "email": "asd"
+    },
+    {
+      "id": "e709be33-1383-45f7-bbb8-551936e81038",
+      "name": "hgb djhc",
+      "email": "madhavi.chute.cse@ghrce.raisoni.net"
+    },
+    {
+      "id": "db8219a0-2f14-4108-ad06-43b201bda235",
+      "name": "Pooja ",
+      "email": "pooja@gmail.com"
+    }
+  ]
+}
