@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy":"gh-pages -d dist",
+    "deploy":"gh-pages -d build",
     "start": "json-server -p 3006 -w db.json"
   },
   "keywords": [],
