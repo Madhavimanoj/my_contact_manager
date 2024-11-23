@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/my_contact_manager/static/css/main.22fe013b.css",
+    "main.js": "/my_contact_manager/static/js/main.2cccb17d.js",
+    "static/media/user.png": "/my_contact_manager/static/media/user.4ce1ce10ce20ffcefb44.png",
+    "index.html": "/my_contact_manager/index.html",
+    "main.22fe013b.css.map": "/my_contact_manager/static/css/main.22fe013b.css.map",
+    "main.2cccb17d.js.map": "/my_contact_manager/static/js/main.2cccb17d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22fe013b.css",
+    "static/js/main.2cccb17d.js"
+  ]
+}
