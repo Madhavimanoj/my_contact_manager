@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const AddContact = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const navigate = useNavigate();
+  const history = useHistory();
 
   const add = (e) => {
     e.preventDefault();
@@ -16,13 +16,13 @@ const AddContact = (props) => {
     setName("");
     setEmail("");
 
-    navigate("/");
+    history.push("/");
   };
 
   return (
     <div className="ui main">
-      <h2 style={{margin: " 2 auto" ,fontSize:"40px", padding:"12px"}}>Add Contact</h2>
-      <form style={{background:"pink" , maxWidth:"800px", margin: "0 auto" , padding:"70px", border:"10px solid #ccc", borderRadius:"25px" }} className="ui form" onSubmit={add}>
+      <h2 style={{margin: "2 auto", fontSize:"40px", padding:"12px"}}>Add Contact</h2>
+      <form style={{background:"pink", maxWidth:"800px", margin: "0 auto", padding:"70px", border:"10px solid #ccc", borderRadius:"25px"}} className="ui form" onSubmit={add}>
         <div className="field">
           <label style={{fontFamily: "Arial, Helvetica, sans-serif", fontWeight: "bolder", fontSize: "20px"}}>Name</label>
           <input

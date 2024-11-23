@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useNavigate } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import api from './api/contacts';
 import './App.css';
@@ -86,29 +86,32 @@ function App() {
   return (
     <div className="ui container">
       <Header />
-      <Routes>
+      <Switch>
         <Route 
           path="/" 
-          element={<ContactList 
-            contacts={searchTerm.length < 1 ? contacts : searchResults} 
-            getContactId={removeContactHandler} 
-            term={searchTerm} 
-            searchKeyword={searchHandler} 
-          />} 
+          exact
+          component={() => (
+            <ContactList 
+              contacts={searchTerm.length < 1 ? contacts : searchResults} 
+              getContactId={removeContactHandler} 
+              term={searchTerm} 
+              searchKeyword={searchHandler} 
+            />
+          )}
         />
         <Route 
           path="/add" 
-          element={<AddContact addContactHandler={addContactHandler} />} 
+          component={() => <AddContact addContactHandler={addContactHandler} />} 
         />
         <Route 
           path="/edit/:id" 
-          element={<EditContact updateContactHandler={updateContactHandler} />} 
+          component={() => <EditContact updateContactHandler={updateContactHandler} />} 
         />
         <Route 
           path="/contact/:id" 
-          element={<ContactDetail />} 
+          component={ContactDetail} 
         />
-      </Routes>
+      </Switch>
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import api from '../api/contacts';
 
 const EditContact = ({ updateContactHandler }) => {
   const { id } = useParams();
   const [contact, setContact] = useState({ name: "", email: "" });
-  const navigate = useNavigate();
+  const history = useHistory();
 
   const retrieveContact = async (id) => {
     try {
@@ -32,7 +32,7 @@ const EditContact = ({ updateContactHandler }) => {
       return;
     }
     updateContactHandler(contact);
-    navigate("/");
+    history.push("/");
   };
 
   return (
@@ -40,7 +40,7 @@ const EditContact = ({ updateContactHandler }) => {
       <h2 style={{fontSize:"35px", marginBottom:"20px", color:"purple"}}>Edit Contact</h2>
       <form className="ui form" onSubmit={update}>
         <div className="field">
-          <label >Name</label>
+          <label>Name</label>
           <input
             type="text"
             name="name"
@@ -50,7 +50,7 @@ const EditContact = ({ updateContactHandler }) => {
           />
         </div>
         <div className="field">
-          <label >Email</label>
+          <label>Email</label>
           <input
             type="text"
             name="email"
